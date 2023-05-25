@@ -3297,6 +3297,10 @@ PrefabInstance:
       propertyPath: _puckUpBullet.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8132735153692091899, guid: 039c09a518260734da9932a44b33168b, type: 3}
+      propertyPath: _checkCountBullet.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8132735153692091901, guid: 039c09a518260734da9932a44b33168b, type: 3}
       propertyPath: m_Name
       value: Player

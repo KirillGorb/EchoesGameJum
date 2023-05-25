@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class Shoot : MonoBehaviour
 {
-    [SerializeField] private UnityEvent<string> _puckUpBullet;
+    [SerializeField] private UnityEvent<string> _checkCountBullet;
 
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Bullet _bullet;
@@ -18,7 +18,7 @@ public class Shoot : MonoBehaviour
 
     private void Start()
     {
-        _puckUpBullet?.Invoke(_countBullet + "");
+        _checkCountBullet?.Invoke(_countBullet + "");
         if (_countBullet <= 0)
             _gunShoot.gameObject.SetActive(false);
     }
@@ -34,7 +34,7 @@ public class Shoot : MonoBehaviour
         {
             _countBullet--;
             Instantiate(_bullet, _spawnPoint.position, _gunShoot.rotation).BulletType = _bulletTypeSpawn;
-            _puckUpBullet?.Invoke(_countBullet + "");
+            _checkCountBullet?.Invoke(_countBullet + "");
 
             if (_countBullet <= 0)
                 _gunShoot.gameObject.SetActive(false);
@@ -47,7 +47,7 @@ public class Shoot : MonoBehaviour
         {
             _countBullet++;
             Destroy(other.gameObject);
-            _puckUpBullet?.Invoke(_countBullet + "");
+            _checkCountBullet?.Invoke(_countBullet + "");
 
 
             _gunShoot.gameObject.SetActive(true);

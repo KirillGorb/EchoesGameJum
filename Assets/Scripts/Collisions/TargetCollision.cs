@@ -7,43 +7,34 @@ public class TargetCollision : MonoBehaviour
 
     [SerializeField] private GameObject _objFon;
     [SerializeField] private GameObject _objState;
+
     [SerializeField] private float _setDistancy;
 
-    private bool isFon = true;
     protected Transform _player;
+
+    public virtual void Invoke() => _eventCollisionInput?.Invoke();
 
     private void Awake()
     {
         _player = FindObjectOfType<PlayerMove>().transform;
-        SetNoFon();
+        SetFon(false);
     }
-
-    public virtual void Invoke() => _eventCollisionInput?.Invoke();
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.GetComponent<PlayerCheckTriggerAndInput>())
-            SetFon();
+            SetFon(true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.GetComponent<PlayerCheckTriggerAndInput>())
-            SetNoFon();
+            SetFon(false);
     }
 
-    private void SetFon()
+    private void SetFon(bool set)
     {
-        if (isFon) return;
-        isFon = true;
-        _objFon.SetActive(true);
-        _objState.SetActive(false);
-    }
-    private void SetNoFon()
-    {
-        if (!isFon) return;
-        isFon = false;
-        _objFon.SetActive(false);
-        _objState.SetActive(true);
+        _objFon.SetActive(set);
+        _objState.SetActive(!set);
     }
 }

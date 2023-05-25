@@ -16,7 +16,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        //if (MoveInput == Vector3.zero) return;
+        if (MoveInput.magnitude == 0) return;
         Vector3 diference = transform.position + MoveInput - transform.position;
         float rotateZ = Mathf.Atan2(diference.y, diference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotateZ);

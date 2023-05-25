@@ -9,8 +9,8 @@ public class PlayerCheckTriggerAndInput : MonoBehaviour
 
     private void Update()
     {
-        var s = Physics2D.OverlapCircle(transform.position, _radius, _layer);
-        if (s && s.TryGetComponent(out _target) && Input.GetKeyDown(KeyCode.E))
+        var resorseItem = Physics2D.OverlapCircle(transform.position, _radius, _layer);
+        if (resorseItem && resorseItem.TryGetComponent(out _target) && Input.GetKeyDown(KeyCode.E))
             _target.Invoke();
     }
 }

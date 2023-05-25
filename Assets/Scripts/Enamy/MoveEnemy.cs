@@ -26,8 +26,11 @@ public class MoveEnemy
         transform.rotation = Quaternion.Euler(0f, 0f, rotateZ);
 
         if (Vector2.Distance(_player.position, transform.position) >= DistancyMove + _exp)
-            _rd.MovePosition(Vector2.LerpUnclamped(transform.position, _player.position, _speed * Time.deltaTime));
+            Movement(transform);
         else if (Vector2.Distance(_player.position, transform.position) <= DistancyMove)
-            _rd.MovePosition(Vector2.LerpUnclamped(transform.position, _player.position, -_speed * Time.deltaTime));
+            Movement(transform, false);
     }
+
+    private void Movement(Transform transform, bool isMove = true) =>
+         _rd.MovePosition(Vector2.LerpUnclamped(transform.position, _player.position, (isMove ? 1 : -1) * _speed * Time.deltaTime));
 }

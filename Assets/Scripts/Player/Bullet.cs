@@ -5,6 +5,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private float _timeLive;
     [SerializeField] private float _damage;
+
     [SerializeField] private GameObject _bulletEffect;
 
     public TypeBullet BulletType { get; set; }

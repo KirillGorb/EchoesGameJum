@@ -22,10 +22,10 @@ public class ShootEnemy
         while (true)
         {
             yield return new WaitForSeconds(_enemyShootData.TimeAttack);
-            var s = MonoBehaviour.Instantiate(_bulletEnemy, _spanwPoint.position, transform.rotation);
+            var bullet = MonoBehaviour.Instantiate(_bulletEnemy, _spanwPoint.position, transform.rotation);
 
-            s.SetSpeed = _enemyShootData.SpeedBullet;
-            s.BulletType = _bulletTypeSpawn;
+            bullet.SetSpeed = _enemyShootData.SpeedBullet;
+            bullet.BulletType = _bulletTypeSpawn;
         }
     }
 }

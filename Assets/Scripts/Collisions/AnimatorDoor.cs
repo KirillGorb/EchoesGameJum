@@ -10,5 +10,5 @@ public class AnimatorDoor : MonoBehaviour
         _anim = GetComponent<Animator>();
     }
 
-    public void SetState(bool IsOpen) => _anim.SetBool("IsOpen", IsOpen);
+    public void SetState(bool setOpen) => _anim.SetBool("IsOpen", setOpen);
 }

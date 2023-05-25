@@ -5,4 +5,5 @@ obj/
 Temp/
 Assembly-CSharp.csproj/
 EchoesGameJum.sln/
-
+.vsconfig/
+.vs/
