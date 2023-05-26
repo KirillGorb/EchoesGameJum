@@ -58,7 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Collisions\DoorControler.cs" />
     <Compile Include="Assets\Scripts\UI\Destroer.cs" />
-    <Compile Include="Assets\SpawnerEnemy.cs" />
+    <Compile Include="Assets\Scripts\SceneControl\SpawnerEnemy.cs" />
     <Compile Include="Assets\Scripts\Collisions\ContactWithSavePoint.cs" />
     <Compile Include="Assets\Scripts\Collisions\LeverCollicion.cs" />
     <Compile Include="Assets\Scripts\Collisions\ContactWithBullet.cs" />
@@ -66,7 +66,6 @@
     <Compile Include="Assets\Scripts\Collisions\ButtonOnCollition.cs" />
     <Compile Include="Assets\Scripts\Player\Bullet.cs" />
     <Compile Include="Assets\Scripts\Enamy\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Collisions\AnimatorDoor.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCheckTriggerAndInput.cs" />
     <Compile Include="Assets\Scripts\Collisions\TargetCollision.cs" />
@@ -78,6 +77,9 @@
     <Compile Include="Assets\Scripts\SceneControl\SavePoint.cs" />
     <Compile Include="Assets\Scripts\Enamy\MoveEnemy.cs" />
     <Compile Include="Assets\Scripts\Enamy\ShootEnemy.cs" />
+    <Compile Include="Assets\Scripts\IHealth.cs" />
+    <Compile Include="Assets\Scripts\HealthAndChange.cs" />
+    <Compile Include="Assets\Scripts\HealthData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5766a977da685448f7ee456d3c9336, type: 3}
   m_Name: Save Point
   m_EditorClassIdentifier: 
-  _startSpawnPoint: {x: -35.21, y: 0, z: 0}
+  _startSpawnPoint: {x: -36.8, y: 0, z: 0}
   _spawnPoint: {x: 0, y: 0, z: 0}

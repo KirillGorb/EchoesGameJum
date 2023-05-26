@@ -20853,50 +20853,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 393102993, guid: 039c09a518260734da9932a44b33168b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 749364833, guid: 039c09a518260734da9932a44b33168b, type: 3}
-      propertyPath: Death.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 519420034}
-    - target: {fileID: 749364833, guid: 039c09a518260734da9932a44b33168b, type: 3}
-      propertyPath: _changeHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1480217367}
-    - target: {fileID: 1390870544, guid: 039c09a518260734da9932a44b33168b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1390870546, guid: 039c09a518260734da9932a44b33168b, type: 3}
-      propertyPath: m_Color.a
-      value: 0.14901961
-      objectReference: {fileID: 0}
-    - target: {fileID: 8132735153692091899, guid: 039c09a518260734da9932a44b33168b, type: 3}
-      propertyPath: _puckUpBullet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 108599375}
-    - target: {fileID: 8132735153692091899, guid: 039c09a518260734da9932a44b33168b, type: 3}
-      propertyPath: _checkCountBullet.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8132735153692091899, guid: 039c09a518260734da9932a44b33168b, type: 3}
       propertyPath: _checkCountBullet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 108599375}
-    - target: {fileID: 8132735153692091899, guid: 039c09a518260734da9932a44b33168b, type: 3}
-      propertyPath: _checkCountBullet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_text
-      objectReference: {fileID: 0}
-    - target: {fileID: 8132735153692091899, guid: 039c09a518260734da9932a44b33168b, type: 3}
-      propertyPath: _checkCountBullet.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.UI.Text, UnityEngine.UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 8132735153692091899, guid: 039c09a518260734da9932a44b33168b, type: 3}
-      propertyPath: _checkCountBullet.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8132735153692091901, guid: 039c09a518260734da9932a44b33168b, type: 3}
       propertyPath: m_Name
       value: Player
@@ -20945,9 +20905,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8132735153771983569, guid: 039c09a518260734da9932a44b33168b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.514
-      objectReference: {fileID: 0}
+    - target: {fileID: 8615364620439103753, guid: 039c09a518260734da9932a44b33168b, type: 3}
+      propertyPath: Death.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 519420034}
+    - target: {fileID: 8615364620439103753, guid: 039c09a518260734da9932a44b33168b, type: 3}
+      propertyPath: _changeHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1480217367}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 039c09a518260734da9932a44b33168b, type: 3}

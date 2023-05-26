@@ -158,7 +158,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 11
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.9339623, g: 0.8789954, b: 0.28547525, a: 0.39215687}
+  m_Color: {r: 0.9339623, g: 0.8789954, b: 0.28547525, a: 0.14901961}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -246,8 +246,8 @@ GameObject:
   - component: {fileID: 8132735153692091898}
   - component: {fileID: 8132735153692091896}
   - component: {fileID: 8132735153692091899}
-  - component: {fileID: 749364833}
   - component: {fileID: 3447849528517275753}
+  - component: {fileID: 8615364620439103753}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -351,12 +351,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
+        m_MethodName: set_text
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -369,7 +369,7 @@ MonoBehaviour:
   _offsetZGunShoot: 4
   _bulletTypeSpawn: 0
   _countBullet: 0
---- !u!114 &749364833
+--- !u!114 &3447849528517275753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -378,7 +378,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 8132735153692091901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1edee4ab3798e10438e4a075f6b4fd12, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b37d8f9c468dd84db9b83633e465cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onTriggerShootEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8615364620439103753}
+        m_TargetAssemblyTypeName: HealthAndChange, Assembly-CSharp
+        m_MethodName: Damage
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _contactTypeBullet: 1
+--- !u!114 &8615364620439103753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8132735153692091901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0afb8f46b9b4664b92493d575661e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Death:
@@ -396,6 +424,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _startHealth: 10
+  _timeRegeneration: 1.5
+  _sizeRegen: 0.5
+  _bulletTypeDamage: 1
   _changeHealth:
     m_PersistentCalls:
       m_Calls:
@@ -411,38 +443,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _startHealth: 10
-  _timeRegeneration: 3
-  _sizeRegen: 0.5
-  _bulletTypeDamage: 1
---- !u!114 &3447849528517275753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8132735153692091901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b37d8f9c468dd84db9b83633e465cab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onTriggerShootEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 749364833}
-        m_TargetAssemblyTypeName: Health, Assembly-CSharp
-        m_MethodName: Damage
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 2
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _contactTypeBullet: 1
 --- !u!1 &8132735153771983568
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8132735153771983568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.79899603, y: -0.04, z: 0}
+  m_LocalPosition: {x: 0.514, y: -0.04, z: 0}
   m_LocalScale: {x: 0.98277485, y: 4.1585417, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
