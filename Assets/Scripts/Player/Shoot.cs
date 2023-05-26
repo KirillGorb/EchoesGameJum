@@ -16,25 +16,36 @@ public class Shoot : MonoBehaviour
 
     [SerializeField] private int _countBullet = 0;
 
+    private string ChangeText => _countBullet + "";
+
     private void Start()
     {
-        _checkCountBullet?.Invoke(_countBullet + "");
+        _checkCountBullet?.Invoke(ChangeText);
         if (_countBullet <= 0)
             _gunShoot.gameObject.SetActive(false);
     }
 
     public void Update()
     {
+        Rotation();
+        ShootOnClick();
+    }
+
+    private void Rotation()
+    {
         Vector3 diference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - _gun.position;
         float rotateZ = Mathf.Atan2(diference.y, diference.x) * Mathf.Rad2Deg;
         _gun.rotation = Quaternion.Euler(0, 0, rotateZ);
         _gunShoot.rotation = Quaternion.Euler(0, 0, rotateZ + _offsetZGunShoot);
+    }
 
+    private void ShootOnClick()
+    {
         if (Input.GetMouseButtonDown(0) && _countBullet > 0)
         {
             _countBullet--;
             Instantiate(_bullet, _spawnPoint.position, _gunShoot.rotation).BulletType = _bulletTypeSpawn;
-            _checkCountBullet?.Invoke(_countBullet + "");
+            _checkCountBullet?.Invoke(ChangeText);
 
             if (_countBullet <= 0)
                 _gunShoot.gameObject.SetActive(false);
@@ -46,10 +57,9 @@ public class Shoot : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
             _countBullet++;
+            _checkCountBullet?.Invoke(ChangeText);
+
             Destroy(other.gameObject);
-            _checkCountBullet?.Invoke(_countBullet + "");
-
-
             _gunShoot.gameObject.SetActive(true);
         }
     }

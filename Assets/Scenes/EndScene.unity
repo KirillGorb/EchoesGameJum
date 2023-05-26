@@ -1660,7 +1660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8132735153692091899, guid: 039c09a518260734da9932a44b33168b, type: 3}
       propertyPath: _countBullet
-      value: 100
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 8132735153692091899, guid: 039c09a518260734da9932a44b33168b, type: 3}
       propertyPath: _puckUpBullet.m_PersistentCalls.m_Calls.Array.size
@@ -1722,4 +1722,5 @@ PrefabInstance:
     - {fileID: 3447849528517275753, guid: 039c09a518260734da9932a44b33168b, type: 3}
     - {fileID: 749364833, guid: 039c09a518260734da9932a44b33168b, type: 3}
     - {fileID: 749364832, guid: 039c09a518260734da9932a44b33168b, type: 3}
+    - {fileID: 8615364620439103753, guid: 039c09a518260734da9932a44b33168b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 039c09a518260734da9932a44b33168b, type: 3}

@@ -191,10 +191,9 @@ MonoBehaviour:
     _bulletEnemy: {fileID: 6072147151207946467, guid: 9c5e604cb274a634096e59834ef90c08, type: 3}
     _spanwPoint: {fileID: 5406526039856795646}
   _move:
-    DistancyMove: 6
     _speed: 2
+    _distancyMove: 6
     _exp: 0.4
-  _isDrop: 0
 --- !u!114 &8844928146000249897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +252,6 @@ MonoBehaviour:
   _startHealth: 1
   _timeRegeneration: 15
   _sizeRegen: 0.005
-  _bulletTypeDamage: 0
 --- !u!1 &5406526039856795647
 GameObject:
   m_ObjectHideFlags: 0

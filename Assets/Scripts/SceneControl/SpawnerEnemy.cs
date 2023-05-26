@@ -37,8 +37,8 @@ public class SpawnerEnemy : MonoBehaviour
 
     public void TheEnd()
     {
-        _recordCountEnemy.text = "" + _countDeatEnemy;
-        _recordTimeLive.text = "" + _timeLive;
+        _recordCountEnemy.text = _countDeatEnemy.ToString();
+        _recordTimeLive.text = _timeLive.ToString();
     }
 
     public int CountDeatEnemy
@@ -58,6 +58,11 @@ public class SpawnerEnemy : MonoBehaviour
 
     private void Update()
     {
+        ChangeSecondomer();
+    }
+
+    private void ChangeSecondomer()
+    {
         _timeLive += Time.deltaTime;
         _textTimeLive.text = ((int)_timeLive).ToString();
     }
@@ -72,12 +77,13 @@ public class SpawnerEnemy : MonoBehaviour
             if (_timeSpawn > _MaxTimeSpawn)
                 _timeSpawn -= _VelocityTimeSpawn;
 
-            Instantiate(_enemy, SpawnPoint(), Quaternion.identity)._Init_( new EnemyShootData( Random.Range(_MinSpeedBullet, _MaxSpeedBullet),
-                                                                            Random.Range(_MinTimerBullet, _MaxTimerBullet) ),
+            Instantiate(_enemy, SpawnPoint(), Quaternion.identity)._Init_(new EnemyShootData(Random.Range(_MinSpeedBullet, _MaxSpeedBullet),
+                                                                            Random.Range(_MinTimerBullet, _MaxTimerBullet)),
                                                                             Random.Range(_MinDistancyOfPlayer, _MaxDistancyOfPlayer),
                                                                             Random.Range(_MinBulletDrop, _MaxBulletDrop), _dropItem);
         }
     }
 
-    private Vector3 SpawnPoint() => new Vector3(Random.Range(_startPointSpanw.position.x, _endPointSpanw.position.x), Random.Range(_startPointSpanw.position.y, _endPointSpanw.position.y), 0);
+    private Vector3 SpawnPoint() =>
+        new Vector3(Random.Range(_startPointSpanw.position.x, _endPointSpanw.position.x), Random.Range(_startPointSpanw.position.y, _endPointSpanw.position.y), 0);
 }

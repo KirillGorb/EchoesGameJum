@@ -10,11 +10,7 @@ public class ShootEnemy
     [SerializeField] private Bullet _bulletEnemy;
     [SerializeField] private Transform _spanwPoint;
 
-    public void SetData(MonoBehaviour monoBehaviour)
-    {
-        monoBehaviour.StartCoroutine(SpawnBullet(monoBehaviour.transform));
-    }
-
+    public void SetData(MonoBehaviour monoBehaviour) => monoBehaviour.StartCoroutine(SpawnBullet(monoBehaviour.transform));
     public void SetData(EnemyShootData data) => _enemyShootData = data;
 
     private IEnumerator SpawnBullet(Transform transform)

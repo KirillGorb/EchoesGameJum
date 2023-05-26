@@ -7,7 +7,7 @@ public class PlayerMove : MonoBehaviour
 
     private Rigidbody2D _rd;
 
-    private Vector3 MoveInput => new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * _speed * Time.fixedDeltaTime;
+    private Vector3 MoveInput => new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * _speed;
 
     private void Start()
     {
@@ -16,11 +16,16 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        if (MoveInput.magnitude == 0) return;
-        Vector3 diference = transform.position + MoveInput - transform.position;
-        float rotateZ = Mathf.Atan2(diference.y, diference.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rotateZ);
+        RigidbodyMove();
+        Rotation();
+    }
 
-        _rd.velocity = MoveInput;
+    private void RigidbodyMove() => _rd.velocity = MoveInput;
+
+    private void Rotation()
+    {
+        if (MoveInput.magnitude == 0) return;
+        float rotateZ = Mathf.Atan2(MoveInput.y, MoveInput.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, rotateZ);
     }
 }

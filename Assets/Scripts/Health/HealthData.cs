@@ -28,12 +28,11 @@ public class HealthData : MonoBehaviour, IHealth
         if (_isFullHealth)
             StartCoroutine(Regeneration());
         _isFullHealth = false;
-        Debug.Log(_health);
     }
 
-    public virtual void Regen(float _regen = 1)
+    public virtual void Regen(float regen = 1)
     {
-        _health += _regen;
+        _health += regen;
 
         if (_health > _startHealth)
         {

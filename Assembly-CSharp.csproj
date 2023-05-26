@@ -56,11 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Health\HealthAndChange.cs" />
     <Compile Include="Assets\Scripts\Collisions\DoorControler.cs" />
     <Compile Include="Assets\Scripts\UI\Destroer.cs" />
     <Compile Include="Assets\Scripts\SceneControl\SpawnerEnemy.cs" />
     <Compile Include="Assets\Scripts\Collisions\ContactWithSavePoint.cs" />
     <Compile Include="Assets\Scripts\Collisions\LeverCollicion.cs" />
+    <Compile Include="Assets\Scripts\Health\IHealth.cs" />
     <Compile Include="Assets\Scripts\Collisions\ContactWithBullet.cs" />
     <Compile Include="Assets\Scripts\SceneControl\SceneControler.cs" />
     <Compile Include="Assets\Scripts\Collisions\ButtonOnCollition.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerCheckTriggerAndInput.cs" />
     <Compile Include="Assets\Scripts\Collisions\TargetCollision.cs" />
     <Compile Include="Assets\Scripts\Collisions\BoxCollition.cs" />
+    <Compile Include="Assets\Scripts\Health\HealthData.cs" />
     <Compile Include="Assets\Scripts\UI\TextActive.cs" />
     <Compile Include="Assets\Scripts\Player\Shoot.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
@@ -77,9 +80,7 @@
     <Compile Include="Assets\Scripts\SceneControl\SavePoint.cs" />
     <Compile Include="Assets\Scripts\Enamy\MoveEnemy.cs" />
     <Compile Include="Assets\Scripts\Enamy\ShootEnemy.cs" />
-    <Compile Include="Assets\Scripts\IHealth.cs" />
-    <Compile Include="Assets\Scripts\HealthAndChange.cs" />
-    <Compile Include="Assets\Scripts\HealthData.cs" />
+    <Compile Include="Assets\Scripts\Enamy\EnemyDrop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

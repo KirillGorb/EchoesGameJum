@@ -5,13 +5,12 @@ public class SceneControler : MonoBehaviour
 {
     [SerializeField] private SavePoint _saver;
 
+    private float _cameraPosZ = -10;
+
     private void Awake()
     {
-        var player = FindObjectOfType<PlayerMove>().transform;
-        var camera = Camera.main.transform;
-
-        player.position = _saver.SpawnPoint;
-        camera.position = _saver.SpawnPoint + Vector3.forward * -10;
+        FindObjectOfType<PlayerMove>().transform.position = _saver.SpawnPoint;
+        Camera.main.transform.position = _saver.SpawnPoint + Vector3.forward * _cameraPosZ;
     }
 
     public void EXIT() => Application.Quit();

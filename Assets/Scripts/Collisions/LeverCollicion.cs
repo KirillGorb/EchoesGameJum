@@ -15,7 +15,11 @@ public class LeverCollicion : TargetCollision
     public override void Invoke()
     {
         _isFirst = !_isFirst;
+        ActionEvent();
+    }
 
+    private void ActionEvent()
+    {
         if (_isFirst)
             base.Invoke();
         else

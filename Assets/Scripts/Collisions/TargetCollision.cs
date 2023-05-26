@@ -14,6 +14,8 @@ public class TargetCollision : MonoBehaviour
 
     public virtual void Invoke() => _eventCollisionInput?.Invoke();
 
+    private bool IsCheck(Collider2D collision) => collision.GetComponent<PlayerCheckTriggerAndInput>();
+
     private void Awake()
     {
         _player = FindObjectOfType<PlayerMove>().transform;
@@ -22,14 +24,18 @@ public class TargetCollision : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.GetComponent<PlayerCheckTriggerAndInput>())
-            SetFon(true);
+        ActionFon(true, collision);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponent<PlayerCheckTriggerAndInput>())
-            SetFon(false);
+        ActionFon(false, collision);
+    }
+
+    private void ActionFon(bool set, Collider2D collision)
+    {
+        if (IsCheck(collision))
+            SetFon(set);
     }
 
     private void SetFon(bool set)

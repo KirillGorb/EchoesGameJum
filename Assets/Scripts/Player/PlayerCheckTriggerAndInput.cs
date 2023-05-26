@@ -5,12 +5,17 @@ public class PlayerCheckTriggerAndInput : MonoBehaviour
     [SerializeField] private float _radius;
     [SerializeField] private LayerMask _layer;
 
-    private TargetCollision _target;
+    private KeyCode ClickType = KeyCode.E;
 
     private void Update()
     {
+        Action();
+    }
+
+    private void Action()
+    {
         var resorseItem = Physics2D.OverlapCircle(transform.position, _radius, _layer);
-        if (resorseItem && resorseItem.TryGetComponent(out _target) && Input.GetKeyDown(KeyCode.E))
-            _target.Invoke();
+        if (resorseItem && resorseItem.TryGetComponent(out TargetCollision target) && Input.GetKeyDown(ClickType))
+            target.Invoke();
     }
 }

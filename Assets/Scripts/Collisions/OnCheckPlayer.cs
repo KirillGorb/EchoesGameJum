@@ -6,15 +6,17 @@ public class OnCheckPlayer : MonoBehaviour
     [SerializeField] private UnityEvent _onTriggerStay;
     [SerializeField] private UnityEvent _onTriggerExit;
 
+    private bool IsCheck(Collider2D other) => other.GetComponent<PlayerMove>();
+
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.GetComponent<PlayerMove>())
+        if (IsCheck(other))
             _onTriggerStay?.Invoke();
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.GetComponent<PlayerMove>())
+        if (IsCheck(other))
             _onTriggerExit?.Invoke();
     }
 }

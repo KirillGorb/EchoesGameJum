@@ -13005,6 +13005,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 188525676}
     m_Modifications:
+    - target: {fileID: 5363796584011857508, guid: 573d1436d9fb6ba428cb09e4b6c8de43, type: 3}
+      propertyPath: _sizeRegen
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363796584011857508, guid: 573d1436d9fb6ba428cb09e4b6c8de43, type: 3}
+      propertyPath: _timeRegeneration
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5406526039319873092, guid: 573d1436d9fb6ba428cb09e4b6c8de43, type: 3}
       propertyPath: _startHealth
       value: 1000
@@ -13079,7 +13087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8844928146000249897, guid: 573d1436d9fb6ba428cb09e4b6c8de43, type: 3}
       propertyPath: _onTriggerShootEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 573d1436d9fb6ba428cb09e4b6c8de43, type: 3}

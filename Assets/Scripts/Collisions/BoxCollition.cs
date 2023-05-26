@@ -5,12 +5,17 @@ public class BoxCollition : TargetCollision
     [SerializeField] private GameObject _destroyEffect;
 
     [SerializeField] private Vector3 _offset;
-    
+
     private bool _isMove = false;
 
     public override void Invoke() => _isMove = !_isMove;
 
     private void Update()
+    {
+        Move();
+    }
+
+    private void Move()
     {
         if (_isMove)
             transform.position = _player.position + _offset;
